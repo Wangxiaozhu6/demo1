@@ -1,4 +1,5 @@
 import DataProvider.HttpDemo1TestDataProvider;
+import com.alibaba.fastjson.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -7,7 +8,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URL;
-import com.alibaba.fastjson.JSONObject;
 
 /**
  * @项目: apiTest-demo-client
@@ -22,7 +22,7 @@ public class HttpDemo1Test {
     public void testHttp1(String inputName) throws Exception{
 
         //编写一个URL
-        URI uri = new URI("http://localhost:5000/json/" + inputName);
+        URI uri = new URI("http://localhost:8080/json/" + inputName);
         URL url = uri.toURL();
 
         //在java的输入输出操作对象中
